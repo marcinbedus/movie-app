@@ -1,0 +1,54 @@
+.header-categories {
+  box-shadow: 0px -200px 127px 0px rgba(0,0,0,0.75);
+  background: $color-primary;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  //display: none;
+
+  &__nav {
+    height: 100%;
+    width: $width-small;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__button {
+    font-size: 0.9rem;
+    margin: 0.2rem;
+    background: transparent;
+    padding: 0.35em 1.2em;
+    border: 2px solid black;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 0.7rem;
+    }
+  }
+
+  &__button:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &__button--active {
+    color: black;
+    background-color: rgb(255, 255, 255);
+  }
+}

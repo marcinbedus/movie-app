@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Movie!</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://kit.fontawesome.com/8e6d3f829e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page page--active" id="home">
+        <header class="headerMobile">
+            <i class="fas fa-ice-cream fa-2x"></i>
+            <h1 class="headerMobile__titleMobile">Vanilla Movie</h1>
+        </header>
+        <header class="header">
+            <div class="header__wrapper header__wrapper--logo">
+                <a href="" class="header__link header__link--logo">
+                    <i class="fas fa-ice-cream fa-2x"></i>
+                    <h1 class="header__title">Vanilla Movie</h1>
+                </a>
+            </div>
+            <div class="header__wrapper header__wrapper--form">
+                <div class="header__form">
+                    <input type="text" name="search" id="search" class="header__input" required autocomplete="off">
+                    <label for="search" class="header__label">
+                        <span class="header__content">Search by movie title</span>
+                    </label>
+                    <a href="#" class="header__link"><i class="fas fa-search"></i></a></i>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <button class="header__button header__button--movies">
+                            <i class="far fa-list-alt"></i>
+                            <p>Movies</p>
+                        </button>
+                    </li>
+                    <li class="header__item">
+                        <button class="header__button">
+                            <i class="far fa-bookmark"></i>
+                            <p>watch list</p>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="banner">
+            <div class="banner__box">
+                <h2 class="banner__title"></h2>
+                <p class="banner__description"></p>
+            </div>
+        </section>
+        <header class="header-categories" id="header-categories">
+            <nav class="header-categories__nav">
+                <ul class="header-categories__list">
+                    <li class="header-categories__item">
+                        <button class="header-categories__button header-categories__button--active"
+                            id="popular-btn">Popular</button>
+                    </li>
+                    <li class="header-categories__item">
+                        <button class="header-categories__button" id="playingNow-btn">Now playing</button>
+                    </li>
+                    <li class=header-categoriesr__item">
+                        <button class="header-categories__button" id="topRated-btn">Top rated</button>
+                    </li>
+                    <li class="header-categories__item">
+                        <button class="header-categories__button" id="upcoming-btn">Upcoming</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="movies" id="movies">
+            <h2 class="movies__title">Your watch list:</h2>
+            <ul class="movies__list"></ul>
+        </main>
+    </div>
+
+    <div class="page" id="aboutMovie">
+        <section class="movieDetails">
+            <header class="movieDetails__header">
+                <img src="https://image.tmdb.org/t/p/w300/wlfDxbGEsW58vGhFljKkcR5IxDj.jpg" alt="movie">
+                <div class="movieDetails__content">
+                    <div class="movieDetails__description">
+                        <h2 class="movieDetails__title">Extraction</h2>
+                        <p class="movieDetails__slogan">When the mission ends..</p>
+                        <button class="movieDetails__button">Add to my watchlist</button>
+                        <p class="movieDetails__aboutMovie">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                            ducimus mollitia commodi nihil officiis alias, necessitatibus ratione ad. Ullam officiis
+                            sint quia doloremque natus optio aspernatur eveniet! Non, ad ipsa. lorem100</p>
+                        <span class="movieDetails__rating">7.5</span>
+                        <ul class="movieDetails__list">
+                            <li class="movieDetails__item">Drama</li>
+                            <li class="movieDetails__item">Action</li>
+                            <li class="movieDetails__item">Thriller</li>
+                        </ul>
+                    </div>
+                    <div class="movieDetails__info">
+                        <p class="movieDetails__realese-date">Release date: 24.04</p>
+                        <p class="movieDetails__duration">Duration: 1h 56m</p>
+                        <p class="movieDetails__budget">Budget: 0</p>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </div>
+    <script type="module" src="src/js/app.js"></script>
+</body>
+
+</html>

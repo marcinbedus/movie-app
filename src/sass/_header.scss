@@ -1,0 +1,147 @@
+.header {
+  width: 100vw;
+  height: 5rem;
+  background: $color-primary;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  box-shadow: 0px 22px 39px 0px rgba(0, 0, 0, 0.75);
+  align-items: center;
+  z-index: 1;
+  top: 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  &__wrapper--form {
+    width: 30%;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 65%;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    bottom: 0;
+  }
+
+  &__nav {
+    height: 100%;
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+  }
+
+  &__item {
+    padding: 0.4rem;
+  }
+
+  &__item--logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding: 0.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    color: $grey-font-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-out;
+  }
+
+  &__link--logo {
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link--desc {
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    position: relative;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    outline: none;
+    color: white;
+    height: 100%;
+    font-size: 1rem;
+    padding: 0.4rem 1rem 0.2rem 1rem;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__label {
+    font-size: 0.9rem;
+    border-bottom: 1px solid white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &__content {
+    padding: 0.2rem;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transition: all 0.1s ease-out;
+  }
+
+  &__link:hover {
+    color: white;
+  }
+
+  &__input:focus + &__label &__content,
+  &__input:valid + &__label &__content {
+    transform: translateY(-80%) scale(0.9);
+    color: rgb(134, 130, 130);
+  }
+
+  &__button {
+    display: flex;
+    background-color: transparent;
+    color: $grey-font-color;
+    font-size: 1.2rem;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .1s ease-in;
+  }
+
+  &__button * {
+    padding: .2rem;
+  }
+
+  &__button:hover {
+    color: white;
+  }
+}

@@ -1,0 +1,32 @@
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+/*   background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/42a0f97f128a70f56ae1ed5b0c10032a1245e1bf.jpg"); */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  //display: none;
+
+  &__box {
+    max-width: $width-large;
+  }
+
+  &__title {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    font-weight: 800;
+    width: 50%;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+  }
+}

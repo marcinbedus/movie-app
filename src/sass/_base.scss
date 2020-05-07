@@ -1,0 +1,37 @@
+$color-primary: #222831;
+$color-secondary: #393e46;
+$color-tertiary: #eeeeee;
+$color-primary-darker: #1d3452;
+
+$grey-font-color: #999999;
+
+$width-large: 70%;
+$width-medium: 80%;
+$width-small: 90%;
+
+$bp-largest: 78em; //1248px
+$bp-medium: 62.5em;
+$bp-small: 62.5em;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $color-tertiary;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}

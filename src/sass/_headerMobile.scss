@@ -1,0 +1,18 @@
+.headerMobile {
+  height: 5rem;
+  background: $color-primary;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 22px 39px 0px rgba(0, 0, 0, 0.75);
+  align-items: center;
+  color: white;
+  display: none;
+
+  &__titleMobile {
+    padding: 0.5rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+  }
+}

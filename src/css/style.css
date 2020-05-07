@@ -1,0 +1,449 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #eeeeee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  display: none;
+}
+.page--active {
+  display: block;
+}
+
+.header {
+  width: 100vw;
+  height: 5rem;
+  background: #222831;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  box-shadow: 0px 22px 39px 0px rgba(0, 0, 0, 0.75);
+  align-items: center;
+  z-index: 1;
+  top: 0;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header__wrapper--form {
+  width: 30%;
+}
+@media only screen and (max-width: 62.5em) {
+  .header__wrapper--form {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .header {
+    bottom: 0;
+  }
+}
+.header__nav {
+  height: 100%;
+}
+.header__list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+.header__item {
+  padding: 0.4rem;
+}
+.header__item--logo {
+  display: flex;
+  align-items: center;
+}
+.header__title {
+  text-transform: uppercase;
+  padding: 0.4rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .header__title {
+    display: none;
+  }
+}
+.header__link {
+  display: flex;
+  color: #999999;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-out;
+}
+.header__link--logo {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 62.5em) {
+  .header__link--desc {
+    display: none;
+  }
+}
+.header__form {
+  width: 100%;
+  position: relative;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+.header__input {
+  outline: none;
+  color: white;
+  height: 100%;
+  font-size: 1rem;
+  padding: 0.4rem 1rem 0.2rem 1rem;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.header__label {
+  font-size: 0.9rem;
+  border-bottom: 1px solid white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.header__content {
+  padding: 0.2rem;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  transition: all 0.1s ease-out;
+}
+.header__link:hover {
+  color: white;
+}
+.header__input:focus + .header__label .header__content, .header__input:valid + .header__label .header__content {
+  transform: translateY(-80%) scale(0.9);
+  color: #868282;
+}
+.header__button {
+  display: flex;
+  background-color: transparent;
+  color: #999999;
+  font-size: 1.2rem;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.header__button * {
+  padding: 0.2rem;
+}
+.header__button:hover {
+  color: white;
+}
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  /*   background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/42a0f97f128a70f56ae1ed5b0c10032a1245e1bf.jpg"); */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+}
+.banner__box {
+  max-width: 70%;
+}
+.banner__title {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+.banner__description {
+  font-size: 1.5rem;
+  font-weight: 800;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .banner__description {
+    width: 100%;
+  }
+}
+
+.header-categories {
+  box-shadow: 0px -200px 127px 0px rgba(0, 0, 0, 0.75);
+  background: #222831;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+}
+.header-categories__nav {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 62.5em) {
+  .header-categories__nav {
+    justify-content: center;
+  }
+}
+.header-categories__list {
+  display: flex;
+  list-style: none;
+}
+.header-categories__button {
+  font-size: 0.9rem;
+  margin: 0.2rem;
+  background: transparent;
+  padding: 0.35em 1.2em;
+  border: 2px solid black;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+@media only screen and (max-width: 62.5em) {
+  .header-categories__button {
+    font-size: 0.7rem;
+  }
+}
+.header-categories__button:hover {
+  color: black;
+  background-color: white;
+}
+.header-categories__button--active {
+  color: black;
+  background-color: white;
+}
+
+.movies {
+  background: #eeeeee;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.movies__title {
+  margin-top: 7rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: none;
+}
+@media only screen and (max-width: 62.5em) {
+  .movies__title {
+    margin-top: 2rem;
+  }
+}
+.movies__list {
+  width: 70%;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style: none;
+  grid-gap: 20px;
+}
+.movies__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.movies__item::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 70px -3px #031230;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.1s ease-out;
+}
+.movies__item:hover::after {
+  opacity: 1;
+}
+.movies__button-box {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  transform: translateY(400%);
+  visibility: hidden;
+  opacity: 0;
+}
+.movies__button {
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 0.2rem;
+  width: 70%;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.movies__button--link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.movies__button:hover {
+  color: black;
+  background: white;
+}
+.movies__img {
+  transition: all 0.1s ease-in-out;
+  width: 100%;
+  justify-self: center;
+  position: relative;
+  display: inline-block;
+}
+.movies__item:hover .movies__img {
+  transform: scale(1.05);
+  filter: brightness(55%);
+}
+.movies__item:hover .movies__button-box {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer {
+  box-shadow: 0px -22px 39px 0px rgba(0, 0, 0, 0.185);
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222831;
+  font-size: 0.8rem;
+}
+.footer__title {
+  color: white;
+}
+.footer__link {
+  color: white;
+}
+.footer__link:hover {
+  color: #998383;
+}
+
+.headerMobile {
+  height: 5rem;
+  background: #222831;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 22px 39px 0px rgba(0, 0, 0, 0.75);
+  align-items: center;
+  color: white;
+  display: none;
+}
+.headerMobile__titleMobile {
+  padding: 0.5rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .headerMobile {
+    display: flex;
+  }
+}
+
+.movieDetails {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.movieDetails__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.movieDetails__header {
+  background-color: #222831;
+  width: 60%;
+  display: flex;
+}
+.movieDetails__description {
+  position: relative;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.movieDetails__title {
+  color: #ffc107;
+  font-size: 2rem;
+}
+.movieDetails__slogan {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.movieDetails__button {
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  margin: 0.2rem;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.movieDetails__button:hover {
+  color: black;
+  background: white;
+}
+.movieDetails__info {
+  background-color: #1d3452;
+  padding: 0.8rem;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.movieDetails__list {
+  margin-top: 2rem;
+  display: flex;
+  list-style: none;
+}
+.movieDetails__item {
+  border-radius: 10px;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  background-color: #ffc107;
+}
+.movieDetails__rating {
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 2px solid #39ee21;
+  right: 0.9rem;
+  top: 0.9rem;
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

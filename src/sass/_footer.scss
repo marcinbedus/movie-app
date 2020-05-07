@@ -1,0 +1,21 @@
+.footer {
+  box-shadow: 0px -22px 39px 0px rgba(0, 0, 0, 0.185);
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222831;
+  font-size: 0.8rem;
+
+  &__title {
+    color: white;
+  }
+
+  &__link {
+    color: white;
+  }
+
+  &__link:hover {
+    color: rgb(153, 131, 131);
+  }
+}

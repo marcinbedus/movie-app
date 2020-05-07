@@ -1,0 +1,86 @@
+.movieDetails { 
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    &__header {
+        background-color: $color-primary;
+        width: 60%;
+        display: flex;
+    }
+
+    &__description {
+        position: relative;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__title {
+        color: #ffc107;
+        font-size: 2rem;
+    }
+
+    &__slogan {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__button {
+        font-weight: bold;
+        color: white;
+        border: 2px solid white;
+        background-color: transparent;
+        font-size: .9rem;
+        padding: 5px 10px;
+        margin: .2rem;
+        width: 30%;
+        cursor: pointer;
+        transition: all .2s ease-out;
+      }
+    
+      &__button:hover {
+        color: black;
+        background: white;
+      }
+
+    &__info {
+        background-color: $color-primary-darker;
+        padding: .8rem;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    &__list {
+        margin-top: 2rem;
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        border-radius: 10px;
+        margin: 0.2rem;
+        padding: .5rem;
+        background-color: #ffc107;
+    }
+
+    &__rating {
+        border-radius: 50%;
+        padding: .5rem;
+        border: 2px solid rgb(57, 238, 33);
+        right: .9rem;
+        top: .9rem;
+        position: absolute;
+    } 
+}
